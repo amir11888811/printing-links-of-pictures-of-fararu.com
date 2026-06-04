@@ -7,7 +7,7 @@ div=divs[1]
 links=div.find_all("a")
 seen_img=[]
 for link in links:
-    p="https://fararu.com"+link["href"]
+    p="https://fararu.com" +link["href"]
     q=requests.get(p)
     soup=BeautifulSoup(q.content)
     divs=soup.find_all("div",{"class":"primary_files"})
